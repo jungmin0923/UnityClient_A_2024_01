@@ -11,8 +11,8 @@ namespace STORYGAME
         public Enums.StoryType storyType;   //스토리 타입 설정
         public bool storyDone;
 
-        [TextArea(10, 10)]      
-        public string storyText;
+        [TextArea(10, 10)]      //텍스트 영역 표시
+        public string storyText;        //메인 스토리
         public List<Option> options = new List<Option>();
 
         [System.Serializable]
