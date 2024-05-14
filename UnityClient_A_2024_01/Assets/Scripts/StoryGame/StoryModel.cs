@@ -20,7 +20,7 @@ public class StoryModel : MonoBehaviour
     public bool storyDone;           //스토리 종료 여부
 
     [TextArea(10, 10)]      //텍스트 영역 표시
-    public string stoyText;          //메인 스토리
+    public string storyText;          //메인 스토리
 
     public Option[] options;        //선택지 배열
 
