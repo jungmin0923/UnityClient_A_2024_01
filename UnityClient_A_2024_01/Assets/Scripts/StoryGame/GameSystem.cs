@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Text;
 using STORYGAME;
 
 #if UNITY_EDITOR
+[CustomEditor(typeof(GameSystem))]
 public class GameSystemEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -76,8 +78,8 @@ public class GameSystem : MonoBehaviour
     {
         StoryModel tempStoryModel = FindStoryModel(number);
 
-        //StorySystem.Instance.currentStoryModel = tempStoryModels;
-        //StorySystem.Instance.CoShowText();
+        StorySystem.instance.currentStoryModel = tempStoryModel;
+        StorySystem.instance.CoShowText();
     }
     public void ChangeState(StoryModel.Result result)                           //결과 값에 따른 스텟 변경 (각각 1개씩 구현)
     {
